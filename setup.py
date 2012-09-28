@@ -2,49 +2,27 @@
 """
 This module contains the tool of maurits.i18ntalk
 """
-import os
 from setuptools import setup, find_packages
 
-
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
-version = '1.0.dev0'
-
-long_description = (
-    read('README.txt')
-    + '\n' +
-    'Change history\n'
-    '**************\n'
-    + '\n' +
-    read('CHANGES.rst')
-    + '\n' +
-    'Detailed Documentation\n'
-    '**********************\n'
-    + '\n' +
-    read('maurits', 'i18ntalk', 'README.txt')
-    + '\n' +
-    'Contributors\n'
-    '************\n'
-    + '\n' +
-    read('CONTRIBUTORS.txt')
-    + '\n' +
-    'Download\n'
-    '********\n')
 
 tests_require = ['zope.testing']
 
 setup(name='maurits.i18ntalk',
-      version=version,
+      version='1.0.dev0',
       description="Demo package for i18n talk of Maurits at ploneconf 2012",
-      long_description=long_description,
+      long_description=(open("README.txt").read() + "\n" +
+                        open("CHANGES.rst").read()),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
-        'Framework :: Plone',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        ],
+          'Framework :: Plone',
+          "Framework :: Plone :: 4.0",
+          "Framework :: Plone :: 4.1",
+          "Framework :: Plone :: 4.2",
+          "Framework :: Plone :: 4.3",
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: GNU General Public License (GPL)',
+          ],
       keywords='i18n locales ploneconf',
       author='Maurits van Rees',
       author_email='m.van.rees@zestsoftware.nl',
