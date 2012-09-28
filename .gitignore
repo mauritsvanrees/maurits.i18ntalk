@@ -1,0 +1,15 @@
+*.egg
+*.egg-info
+*.pyc
+*.pyo
+.installed.cfg
+.mr.developer.cfg
+bin
+build
+develop-eggs
+dist
+download
+eggs
+fake-eggs
+parts
+var
