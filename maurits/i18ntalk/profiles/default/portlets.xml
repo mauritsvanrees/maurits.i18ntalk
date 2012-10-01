@@ -8,10 +8,10 @@
     i18n:domain="plone">
   <!-- -*- extra stuff goes here -*- -->
 
-   <!-- to have your portlet's title and description translated in 
+   <!-- to have your portlet's title and description translated in
         @@manage-portlets, provide the messageids for the i18n:domain plone
         (see http://dev.plone.org/plone/ticket/9631 or
-             http://dev.plone.org/plone/ticket/9090) for more information on 
+             http://dev.plone.org/plone/ticket/9090) for more information on
         internationalization with portlets or in plone in general -->
    <portlet
      addview="maurits.i18ntalk.portlets.FavoriteBooks"

@@ -4,14 +4,14 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="maurits.i18ntalk">
-    
+
   <five:registerPackage package="." initialize=".initialize" />
 
   <!-- Include the sub-packages that use their own configure.zcml files. -->
   <include package=".browser" />
   <include package=".content" />
   <include package=".portlets" />
-  
+
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
@@ -20,16 +20,16 @@
       description="Demo package for i18n talk of Maurits at ploneconf 2012"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  
+
   <!-- -*- extra stuff goes here -*- -->
 
   <i18n:registerTranslations directory="locales" />
-  
+
 
   <include package=".browser" />
-  
+
 
   <include package=".portlets" />
-  
+
 
 </configure>
