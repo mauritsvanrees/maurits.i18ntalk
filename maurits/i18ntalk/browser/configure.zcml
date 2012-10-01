@@ -8,12 +8,19 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <browser:page
-      for="*"
+      for="maurits.i18ntalk.interfaces.IBook"
       name="book_view"
       class=".bookview.BookView"
       template="bookview.pt"
       permission="zope.Public"
       />
 
+  <browser:menuItem
+      for="maurits.i18ntalk.interfaces.IBook"
+      menu="plone_displayviews"
+      title="Book View"
+      action="@@book_view"
+      description="Custom book view"
+      />
 
 </configure>
