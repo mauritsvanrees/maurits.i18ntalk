@@ -7,8 +7,8 @@ DOMAIN="maurits.i18ntalk"
 # directory.
 i18ndude rebuild-pot --pot locales/${DOMAIN}.pot \
     --create ${DOMAIN} \
-   .
-#    --merge locales/manual.pot \
+    --merge locales/manual.pot \
+    .
 
 # Synchronise the resulting .pot with all .po files
 for po in locales/*/LC_MESSAGES/${DOMAIN}.po; do
