@@ -14,7 +14,7 @@
         <li tal:repeat="book view/books">
           <h3 tal:content="book/Title" />
           <div tal:content="book/Description" />
-          <p i18n:translate="">This book has <span class="stars" i18n:name="stars" tal:content="book/stars" /> stars.</p>
+          <p i18n:translate="">This book has <span class="stars" i18n:name="stars" tal:content="book/getStars" /> stars.</p>
         </li>
       </ul>
     </dd>
