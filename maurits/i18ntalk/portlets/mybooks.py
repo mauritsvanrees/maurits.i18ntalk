@@ -22,7 +22,7 @@ class IMyBooks(IPortletDataProvider):
     same.
     """
 
-    maximum = schema.Integer(
+    maximum = schema.Int(
         title=_(u"Number of books"),
         description=_(u"Maximum number of books to show"),
         required=True,
