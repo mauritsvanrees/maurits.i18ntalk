@@ -7,10 +7,10 @@ from Products.Archetypes import atapi
 from Products.ATContentTypes.content import base
 from Products.ATContentTypes.content import schemata
 
-# -*- Message Factory Imported Here -*-
-
 from maurits.i18ntalk.interfaces import IBook
 from maurits.i18ntalk.config import PROJECTNAME
+
+i18ntalkMessageFactory = MessageFactory('maurits.i18ntalk')
 
 BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
