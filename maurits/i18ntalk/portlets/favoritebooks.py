@@ -13,6 +13,7 @@ from maurits.i18ntalk import i18ntalkMessageFactory as _
 from zope.i18nmessageid import MessageFactory
 __ = MessageFactory("plone")
 
+
 class IFavoriteBooks(IPortletDataProvider):
     """A portlet
 
@@ -21,14 +22,11 @@ class IFavoriteBooks(IPortletDataProvider):
     same.
     """
 
-    # TODO: Add any zope.schema fields here to capture portlet configuration
-    # information. Alternatively, if there are no settings, leave this as an
-    # empty interface - see also notes around the add form and edit form
-    # below.
-
-    # some_field = schema.TextLine(title=_(u"Some field"),
-    #                              description=_(u"A field to use"),
-    #                              required=True)
+    maximum = schema.Integer(
+        title=_(u"Number of favorites"),
+        description=_(u"How many favorite books to show"),
+        required=True,
+        default=5)
 
 
 class Assignment(base.Assignment):
@@ -40,16 +38,11 @@ class Assignment(base.Assignment):
 
     implements(IFavoriteBooks)
 
-    # TODO: Set default values for the configurable parameters here
+    # Set default values for the configurable parameters here
+    maximum = 5
 
-    # some_field = u""
-
-    # TODO: Add keyword parameters for configurable parameters here
-    # def __init__(self, some_field=u''):
-    #    self.some_field = some_field
-
-    def __init__(self):
-        pass
+    def __init__(self, maximum=5):
+       self.maximum = maximum
 
     @property
     def title(self):
@@ -69,9 +62,13 @@ class Renderer(base.Renderer):
 
     render = ViewPageTemplateFile('favoritebooks.pt')
 
+    def books(self):
+        context = aq_inner(self.context)
+        catalog = getToolByName(context, 'portal_catalog')
+        # TODO: favorites
+        books = catalog(portal_type='Book')
+        return books[:self.maximum]
 
-# NOTE: If this portlet does not have any configurable parameters, you can
-# inherit from NullAddForm and remove the form_fields variable.
 
 class AddForm(base.AddForm):
     """Portlet add form.
@@ -85,10 +82,6 @@ class AddForm(base.AddForm):
     def create(self, data):
         return Assignment(**data)
 
-
-# NOTE: IF this portlet does not have any configurable parameters, you can
-# remove this class definition and delete the editview attribute from the
-# <plone:portlet /> registration in configure.zcml
 
 class EditForm(base.EditForm):
     """Portlet edit form.
