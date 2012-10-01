@@ -9,4 +9,16 @@
 
 	<!-- -*- extra stuff goes here -*- -->
 
+  <plone:portlet
+      name="maurits.i18ntalk.portlets.FavoriteBooks"
+      interface=".favoritebooks.IFavoriteBooks"
+      assignment=".favoritebooks.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".favoritebooks.Renderer"
+      addview=".favoritebooks.AddForm"
+      editview=".favoritebooks.EditForm"
+      />
+
+
 </configure>
