@@ -12,11 +12,21 @@ from maurits.i18ntalk.config import PROJECTNAME
 
 # -*- Message Factory Imported Here -*-
 from maurits.i18ntalk import i18ntalkMessageFactory as _
-i18ntalkMessageFactory = MessageFactory('maurits.i18ntalk')
 
 BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
+
+    atapi.StringField(
+        'author',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=_(u"Author"),
+            description=_(u"Author of this book"),
+        ),
+        required=True,
+    ),
+
 
     atapi.IntegerField(
         'stars',
@@ -27,7 +37,6 @@ BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
         ),
         validators=('isInt'),
     ),
-
 
 
 ))
@@ -52,6 +61,8 @@ class Book(base.ATCTContent):
     description = atapi.ATFieldProperty('description')
 
     # -*- Your ATSchema to Python Property Bridges Here ... -*-
+    author = atapi.ATFieldProperty('author')
+
     stars = atapi.ATFieldProperty('stars')
 
     my = atapi.ATFieldProperty('my')

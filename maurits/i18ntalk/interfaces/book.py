@@ -10,6 +10,12 @@ class IBook(Interface):
     """Information about a book"""
 
     # -*- schema definition goes here -*-
+    author = schema.TextLine(
+        title=_(u"Author"),
+        required=True,
+        description=_(u"Author of this book"),
+    )
+#
     stars = schema.Int(
         title=_(u"Stars"),
         required=False,
