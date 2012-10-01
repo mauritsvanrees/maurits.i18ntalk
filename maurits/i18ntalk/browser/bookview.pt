@@ -4,10 +4,12 @@
       i18n:domain="maurits.i18ntalk">
 <body>
     <div metal:fill-slot="main">
-        <tal:main-macro metal:define-macro="main"
-                        tal:define="testview view/test">
+        <tal:main-macro metal:define-macro="main">
 
-            <span tal:content="testview/dummy">test</span>
+          <h3 tal:content="book/Title" />
+          <div><span i18n:translate="">Author:</span><span tal:content="book/getAuthor" /></div>
+          <div tal:content="book/Description" />
+          <p i18n:translate="">This book has <span class="stars" i18n:name="stars" tal:content="book/getStars" /> stars.</p>
 
         </tal:main-macro>
     </div>

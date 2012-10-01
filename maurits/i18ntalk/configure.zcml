@@ -6,6 +6,7 @@
     i18n_domain="maurits.i18ntalk">
 
   <five:registerPackage package="." initialize=".initialize" />
+  <include package="Products.CMFCore" />
 
   <!-- Include the sub-packages that use their own configure.zcml files. -->
   <include package=".browser" />
