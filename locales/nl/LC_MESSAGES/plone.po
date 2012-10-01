@@ -1,0 +1,27 @@
+# Maurits van Rees <maurits@vanrees.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: maurits.i18ntalk 1.0\n"
+"POT-Creation-Date: 2012-10-01 12:21+0000\n"
+"PO-Revision-Date: 2012-10-01 13:49 +0200\n"
+"Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
+"Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+#: ./browser/bookview.pt
+msgid "A random extra translation in the plone domain."
+msgstr "Een willekeurige extra vertaling in het plone domein, overschreven in de buildout."
+
+#. Default: "You are here:"
+#. This is an override for an existing plone translation.
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
+msgid "you_are_here"
+msgstr "U bent hiernaartoe gebladerd via de buildout:"
+
