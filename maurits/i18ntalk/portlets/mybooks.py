@@ -65,7 +65,7 @@ class Renderer(base.Renderer):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         books = catalog(portal_type='Book')
-        return books[:self.maximum]
+        return books[:self.data.maximum]
 
 
 class AddForm(base.AddForm):
