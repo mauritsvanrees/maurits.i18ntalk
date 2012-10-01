@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-01 12:47+0000\n"
+"POT-Creation-Date: 2012-10-01 12:52+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -43,6 +43,10 @@ msgstr "Boekpagina"
 msgid "Custom book view"
 msgstr "Eigen boekpagina"
 
+#: ./browser/configure.zcml
+msgid "Demo package for i18n talk of Maurits at ploneconf 2012"
+msgstr "Demonstratiepakket voor i18n-presentatie van Maurits op de Plone Conferentie 2012"
+
 #: ./content/book.py:34
 msgid "How well do you like this book? Use number 1 through 5."
 msgstr "Wat vind je van dit boek? Geef een getal tussen de 1 en 5"
@@ -50,6 +54,10 @@ msgstr "Wat vind je van dit boek? Geef een getal tussen de 1 en 5"
 #: ./profiles/default/types/Book.xml
 msgid "Information about a book"
 msgstr "Informatie over een boek"
+
+#: ./browser/configure.zcml
+msgid "Maurits i18n talk"
+msgstr "i18n-presentatie van Maurits"
 
 #: ./portlets/mybooks.py:26
 msgid "Maximum number of books to show"

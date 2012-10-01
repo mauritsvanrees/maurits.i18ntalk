@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-01 12:47+0000\n"
+"POT-Creation-Date: 2012-10-01 12:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,12 +44,20 @@ msgstr ""
 msgid "Custom book view"
 msgstr ""
 
+#: ./browser/configure.zcml
+msgid "Demo package for i18n talk of Maurits at ploneconf 2012"
+msgstr ""
+
 #: ./content/book.py:34
 msgid "How well do you like this book? Use number 1 through 5."
 msgstr ""
 
 #: ./profiles/default/types/Book.xml
 msgid "Information about a book"
+msgstr ""
+
+#: ./browser/configure.zcml
+msgid "Maurits i18n talk"
 msgstr ""
 
 #: ./portlets/mybooks.py:26
