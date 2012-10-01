@@ -10,6 +10,12 @@ class IBook(Interface):
     """Information about a book"""
 
     # -*- schema definition goes here -*-
+    stars = schema.Int(
+        title=_(u"Stars"),
+        required=False,
+        description=_(u"How well do you like this book? Use number 1 through 5."),
+    )
+#
     my = schema.Bool(
         title=_(u"My"),
         required=False,
