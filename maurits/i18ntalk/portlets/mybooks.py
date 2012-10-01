@@ -1,16 +1,15 @@
-from zope.interface import Interface
-from zope.interface import implements
-
+from Acquisition import aq_inner
+from Products.CMFCore.utils import getToolByName
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
-
 from zope import schema
 from zope.formlib import form
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.i18nmessageid import MessageFactory
+from zope.interface import implements
 
 from maurits.i18ntalk import i18ntalkMessageFactory as _
 
-from zope.i18nmessageid import MessageFactory
 __ = MessageFactory("plone")
 
 
@@ -42,7 +41,7 @@ class Assignment(base.Assignment):
     maximum = 5
 
     def __init__(self, maximum=5):
-       self.maximum = maximum
+        self.maximum = maximum
 
     @property
     def title(self):
