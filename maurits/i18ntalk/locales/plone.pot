@@ -19,3 +19,9 @@ msgstr ""
 #: ./browser/bookview.pt
 msgid "A random extra translation in the plone domain."
 msgstr ""
+
+#. This is an override for an existing plone translation.
+#. Default: "You are here:"
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
+msgid "you_are_here"
+msgstr ""

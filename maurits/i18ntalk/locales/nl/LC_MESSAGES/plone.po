@@ -19,3 +19,9 @@ msgstr ""
 msgid "A random extra translation in the plone domain."
 msgstr "Een willekeurige extra vertaling in het plone domein."
 
+#. Default: "You are here:"
+#. This is an override for an existing plone translation.
+#: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
+msgid "you_are_here"
+msgstr "U bent hiernaartoe gebladerd:"
+
