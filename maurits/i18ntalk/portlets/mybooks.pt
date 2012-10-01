@@ -12,7 +12,12 @@
     <dd class="portletItem odd">
       <ul>
         <li tal:repeat="book view/books">
-          <h3 tal:content="book/Title" />
+          <h3><a tal:attributes="href book/getURL"
+                 i18n:translate="">
+            <tal:author i18n:name="author" tal:content="book/getAuthor" />:
+            <tal:title i18n:name="title" tal:content="book/Title" />
+            </a>
+          </h3>
           <div tal:content="book/Description" />
           <p i18n:translate="">This book has <span class="stars" i18n:name="stars" tal:content="book/getStars" /> stars.</p>
         </li>
