@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-01 12:37+0000\n"
+"POT-Creation-Date: 2012-10-01 12:47+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -38,6 +38,10 @@ msgstr "Boek"
 #: ./browser/configure.zcml
 msgid "Book View"
 msgstr "Boekpagina"
+
+#: ./browser/configure.zcml
+msgid "Custom book view"
+msgstr "Eigen boekpagina"
 
 #: ./content/book.py:34
 msgid "How well do you like this book? Use number 1 through 5."
