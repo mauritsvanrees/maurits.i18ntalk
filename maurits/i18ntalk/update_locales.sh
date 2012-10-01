@@ -6,9 +6,9 @@ DOMAIN="maurits.i18ntalk"
 # line normally.  And notice the dot at the end, for the current
 # directory.
 i18ndude rebuild-pot --pot locales/${DOMAIN}.pot \
-    --merge locales/manual.pot \
     --create ${DOMAIN} \
    .
+#    --merge locales/manual.pot \
 
 # Synchronise the resulting .pot with all .po files
 for po in locales/*/LC_MESSAGES/${DOMAIN}.po; do
