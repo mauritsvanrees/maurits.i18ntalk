@@ -19,7 +19,6 @@ BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
     atapi.StringField(
         'author',
-        storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
             label=_(u"Author"),
             description=_(u"Author of this book"),
@@ -30,7 +29,6 @@ BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
     atapi.IntegerField(
         'stars',
-        storage=atapi.AnnotationStorage(),
         widget=atapi.IntegerWidget(
             label=_(u"Stars"),
             description=_(u"How well do you like this book? Use number 1 through 5."),
@@ -41,12 +39,6 @@ BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
 ))
 
-# Set storage on fields copied from ATContentTypeSchema, making sure
-# they work well with the python bridge properties.
-
-BookSchema['title'].storage = atapi.AnnotationStorage()
-BookSchema['description'].storage = atapi.AnnotationStorage()
-
 schemata.finalizeATCTSchema(BookSchema, moveDiscussion=False)
 
 
@@ -56,16 +48,6 @@ class Book(base.ATCTContent):
 
     meta_type = "Book"
     schema = BookSchema
-
-    title = atapi.ATFieldProperty('title')
-    description = atapi.ATFieldProperty('description')
-
-    # -*- Your ATSchema to Python Property Bridges Here ... -*-
-    author = atapi.ATFieldProperty('author')
-
-    stars = atapi.ATFieldProperty('stars')
-
-    my = atapi.ATFieldProperty('my')
 
 
 atapi.registerType(Book, PROJECTNAME)
