@@ -1,0 +1,68 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-10-01 11:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: maurits.i18ntalk\n"
+
+#: ./portlets/mybooks.pt:18
+msgid "${author}: ${title}"
+msgstr ""
+
+#: ./content/book.py:23
+#: ./interfaces/book.py:14
+msgid "Author"
+msgstr ""
+
+#: ./content/book.py:24
+#: ./interfaces/book.py:16
+msgid "Author of this book"
+msgstr ""
+
+#: ./browser/bookview.pt:10
+msgid "Author:"
+msgstr ""
+
+#: ./profiles/default/types/Book.xml
+msgid "Book"
+msgstr ""
+
+#: ./content/book.py:34
+#: ./interfaces/book.py:22
+msgid "How well do you like this book? Use number 1 through 5."
+msgstr ""
+
+#: ./profiles/default/types/Book.xml
+msgid "Information about a book"
+msgstr ""
+
+#: ./portlets/mybooks.py:26
+msgid "Maximum number of books to show"
+msgstr ""
+
+#: ./portlets/mybooks.py:25
+msgid "Number of books"
+msgstr ""
+
+#: ./content/book.py:33
+#: ./interfaces/book.py:20
+msgid "Stars"
+msgstr ""
+
+#: ./browser/bookview.pt:12
+#: ./portlets/mybooks.pt:22
+msgid "This book has ${stars} stars."
+msgstr ""
+
