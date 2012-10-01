@@ -7,4 +7,14 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <browser:page
+      for="*"
+      name="book_view"
+      class=".bookview.BookView"
+      template="bookview.pt"
+      allowed_interface=".bookview.IBookView"
+      permission="zope.Public"
+      />
+
+
 </configure>
