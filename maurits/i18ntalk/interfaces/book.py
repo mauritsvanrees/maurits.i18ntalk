@@ -10,9 +10,9 @@ class IBook(Interface):
     """Information about a book"""
 
     # -*- schema definition goes here -*-
-    favorite = schema.Bool(
-        title=_(u"Favorite"),
+    my = schema.Bool(
+        title=_(u"My"),
         required=False,
-        description=_(u"This is one of my favorite books"),
+        description=_(u"This is one of my my books"),
     )
 #

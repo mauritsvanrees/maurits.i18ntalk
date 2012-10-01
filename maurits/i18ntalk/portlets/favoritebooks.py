@@ -14,7 +14,7 @@ from zope.i18nmessageid import MessageFactory
 __ = MessageFactory("plone")
 
 
-class IFavoriteBooks(IPortletDataProvider):
+class IMyBooks(IPortletDataProvider):
     """A portlet
 
     It inherits from IPortletDataProvider because for this portlet, the
@@ -23,8 +23,8 @@ class IFavoriteBooks(IPortletDataProvider):
     """
 
     maximum = schema.Integer(
-        title=_(u"Number of favorites"),
-        description=_(u"How many favorite books to show"),
+        title=_(u"Number of books"),
+        description=_(u"Maximum number of books to show"),
         required=True,
         default=5)
 
@@ -36,7 +36,7 @@ class Assignment(base.Assignment):
     with columns.
     """
 
-    implements(IFavoriteBooks)
+    implements(IMyBooks)
 
     # Set default values for the configurable parameters here
     maximum = 5
@@ -49,7 +49,7 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return __(u"Favorite Books")
+        return __(u"My Books")
 
 
 class Renderer(base.Renderer):
@@ -60,12 +60,11 @@ class Renderer(base.Renderer):
     of this class. Other methods can be added and referenced in the template.
     """
 
-    render = ViewPageTemplateFile('favoritebooks.pt')
+    render = ViewPageTemplateFile('mybooks.pt')
 
     def books(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
-        # TODO: favorites
         books = catalog(portal_type='Book')
         return books[:self.maximum]
 
@@ -77,7 +76,7 @@ class AddForm(base.AddForm):
     zope.formlib which fields to display. The create() method actually
     constructs the assignment that is being added.
     """
-    form_fields = form.Fields(IFavoriteBooks)
+    form_fields = form.Fields(IMyBooks)
 
     def create(self, data):
         return Assignment(**data)
@@ -89,4 +88,4 @@ class EditForm(base.EditForm):
     This is registered with configure.zcml. The form_fields variable tells
     zope.formlib which fields to display.
     """
-    form_fields = form.Fields(IFavoriteBooks)
+    form_fields = form.Fields(IMyBooks)

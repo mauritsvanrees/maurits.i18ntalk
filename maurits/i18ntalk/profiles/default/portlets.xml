@@ -14,9 +14,9 @@
              http://dev.plone.org/plone/ticket/9090) for more information on
         internationalization with portlets or in plone in general -->
    <portlet
-     addview="maurits.i18ntalk.portlets.FavoriteBooks"
-     title="Favorite Books"
-     description="Show your favorite books"
+     addview="maurits.i18ntalk.portlets.MyBooks"
+     title="My Books"
+     description="Show your my books"
      i18n:attributes="title; description"
    />
 

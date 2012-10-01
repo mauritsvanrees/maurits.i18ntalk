@@ -10,14 +10,14 @@
 	<!-- -*- extra stuff goes here -*- -->
 
   <plone:portlet
-      name="maurits.i18ntalk.portlets.FavoriteBooks"
-      interface=".favoritebooks.IFavoriteBooks"
-      assignment=".favoritebooks.Assignment"
+      name="maurits.i18ntalk.portlets.MyBooks"
+      interface=".mybooks.IMyBooks"
+      assignment=".mybooks.Assignment"
       view_permission="zope2.View"
       edit_permission="cmf.ManagePortal"
-      renderer=".favoritebooks.Renderer"
-      addview=".favoritebooks.AddForm"
-      editview=".favoritebooks.EditForm"
+      renderer=".mybooks.Renderer"
+      addview=".mybooks.AddForm"
+      editview=".mybooks.EditForm"
       />
 
 

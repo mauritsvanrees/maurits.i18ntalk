@@ -17,15 +17,6 @@ BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
-    atapi.BooleanField(
-        'favorite',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.BooleanWidget(
-            label=_(u"Favorite"),
-            description=_(u"This is one of my favorite books"),
-        ),
-    ),
-
 
 ))
 
@@ -49,7 +40,7 @@ class Book(base.ATCTContent):
     description = atapi.ATFieldProperty('description')
 
     # -*- Your ATSchema to Python Property Bridges Here ... -*-
-    favorite = atapi.ATFieldProperty('favorite')
+    my = atapi.ATFieldProperty('my')
 
 
 atapi.registerType(Book, PROJECTNAME)
