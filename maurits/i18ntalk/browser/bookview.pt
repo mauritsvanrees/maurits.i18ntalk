@@ -11,6 +11,10 @@
           <div tal:content="context/Description" />
           <p i18n:translate="">This book has <span class="stars" i18n:name="stars" tal:content="context/getStars" /> stars.</p>
 
+          <p i18n:domain="plone" i18n:translate="">
+            A random extra translation in the plone domain.
+          </p>
+
         </tal:main-macro>
     </div>
 </body>

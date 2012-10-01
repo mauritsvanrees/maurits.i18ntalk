@@ -14,3 +14,8 @@ i18ndude rebuild-pot --pot locales/${DOMAIN}.pot \
 for po in locales/*/LC_MESSAGES/${DOMAIN}.po; do
     i18ndude sync --pot locales/${DOMAIN}.pot $po
 done
+
+# Same for the plone domain.
+for po in locales/*/LC_MESSAGES/plone.po; do
+    i18ndude sync --pot locales/plone.pot $po
+done
