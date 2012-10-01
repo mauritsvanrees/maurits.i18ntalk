@@ -23,6 +23,9 @@
   
   <!-- -*- extra stuff goes here -*- -->
 
+  <i18n:registerTranslations directory="locales" />
+  
+
   <include package=".browser" />
   
 
