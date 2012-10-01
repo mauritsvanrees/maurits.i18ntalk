@@ -64,7 +64,7 @@ class Renderer(base.Renderer):
     def books(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
-        books = catalog(portal_type='Book')
+        books = catalog(portal_type='Book', sort_on='created', sort_order='reverse')
         return books[:self.data.maximum]
 
 

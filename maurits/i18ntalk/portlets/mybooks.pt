@@ -3,8 +3,8 @@
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
-        <span>
-           Header
+        <span i18n:translate="">
+           My latest books
         </span>
         <span class="portletTopRight"></span>
     </dt>
@@ -26,9 +26,6 @@
 
     <dd class="portletFooter">
         <span class="portletBottomLeft"></span>
-        <span>
-           Footer
-        </span>
         <span class="portletBottomRight"></span>
     </dd>
 

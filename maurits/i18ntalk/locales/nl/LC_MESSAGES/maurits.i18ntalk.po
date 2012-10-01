@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-01 11:49+0000\n"
+"POT-Creation-Date: 2012-10-01 12:03+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -20,12 +20,10 @@ msgid "${author}: ${title}"
 msgstr "${author}: ${title}"
 
 #: ./content/book.py:23
-#: ./interfaces/book.py:14
 msgid "Author"
 msgstr "Auteur"
 
 #: ./content/book.py:24
-#: ./interfaces/book.py:16
 msgid "Author of this book"
 msgstr "Auteur van dit boek"
 
@@ -38,9 +36,8 @@ msgid "Book"
 msgstr "Boek"
 
 #: ./content/book.py:34
-#: ./interfaces/book.py:22
 msgid "How well do you like this book? Use number 1 through 5."
-msgstr "Wat vind je van dit boek? Geef een getal tussed de 1 en 5"
+msgstr "Wat vind je van dit boek? Geef een getal tussen de 1 en 5"
 
 #: ./profiles/default/types/Book.xml
 msgid "Information about a book"
@@ -50,12 +47,15 @@ msgstr "Informatie over een boek"
 msgid "Maximum number of books to show"
 msgstr "Maximum aantal boeken om te tonen"
 
+#: ./portlets/mybooks.pt:6
+msgid "My latest books"
+msgstr "Mijn laatste boeken"
+
 #: ./portlets/mybooks.py:25
 msgid "Number of books"
 msgstr "Aantal boeken"
 
 #: ./content/book.py:33
-#: ./interfaces/book.py:20
 msgid "Stars"
 msgstr "Sterren"
 
