@@ -137,7 +137,7 @@ update_locales.sh::
 buildout:cfg
 ------------
 
-.. ::
+::
 
   [instance]
   recipe = plone.recipe.zope2instance
@@ -159,9 +159,39 @@ Specifying PTS_LANGUAGES actually *increases* your memory usage by about
 use add-ons, these numbers will increase.  I have seen a 30 MB difference.
 
 
-Releasing a package with compiled files, using zest.pocompile and MANIFEST.in.
+Include the mo files
+--------------------
 
-How to add extra translations.
+``MANIFEST.in``::
+
+  recursive-include collective *
+  recursive-include docs *
+  include *
+  global-exclude *.pyc
+
+
+Releasing a package
+-------------------
+
+easy_install or pip::
+
+  easy_install zest.releaser zest.pocompile
+
+buildout::
+
+  [release]
+  recipe = zc.recipe.egg
+  eggs =
+      zest.releaser
+      zest.pocompile
+
+
+Extra translations
+------------------
+
+Just add a file::
+
+  your/package/locales/nl/LC_MESSAGES/plone.po
 
 How to override existing translations.
 
