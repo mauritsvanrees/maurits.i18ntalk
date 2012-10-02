@@ -169,7 +169,7 @@ Problems:
 
 - How to extract?
 
-.. image:: ./images/portal_types_domain.png
+.. image:: images/portal_types_domain.png
 
 
 Strings in ZCML
