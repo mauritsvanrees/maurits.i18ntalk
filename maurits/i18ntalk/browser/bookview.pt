@@ -15,6 +15,11 @@
             A random extra translation in the plone domain.
           </p>
 
+          <!-- As example this is intended to be only translated in the i18n folder. -->
+          <p i18n:domain="plone" i18n:translate="">
+            Another plone message.
+          </p>
+
         </tal:main-macro>
     </div>
 </body>
