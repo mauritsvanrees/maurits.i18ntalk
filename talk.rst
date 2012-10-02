@@ -12,18 +12,22 @@ Sample code:
 https://github.com/mauritsvanrees/maurits.i18ntalk
 
 
+.. contents::
+
+
 What is internationalization?
 -----------------------------
 
-i18n means making the web interface appear translated in your local
+``i18n`` means making the web interface appear translated in your local
 language instead of the default English.
 
-I will not talk about localization (l10n), which means making dates,
+I will not talk about localization (``l10n``), which means making dates,
 times and currency appear in the format preferred in your local
 language.
 
 This is also not about multilingual sites, sites that have content in
-both English and Dutch.
+both English and Dutch.  See ``Products.LinguaPlone`` or
+``plone.app.multilingual`` for that.
 
 .. Maybe add two screen shots, in English and Dutch, just to make it
 .. really clear.
@@ -110,8 +114,8 @@ In a template::
   <span tal:content="view/title" />
 
 
-Dynamic content in templates
-----------------------------
+Dynamic content in Python
+-------------------------
 
 ::
 
@@ -168,8 +172,6 @@ Problems:
 
 - Which domain?
   http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
-
-- How to extract without extracting too much?
 
 In GenericSetup files, use your own domain for::
 
