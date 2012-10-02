@@ -428,9 +428,7 @@ Expected changes in the future.
 
   - Bad: currently extracts *all* domains
 
-  - Bad: needs ``setup_requires``
-
-  - See ``setup.py`` and ``setup.cfg``
+  - See ``setup.cfg`` and ``extract.ini``.
 
 - Sprint: support extracting zcml in i18ndude?
   Code: https://github.com/collective/i18ndude

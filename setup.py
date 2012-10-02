@@ -39,12 +39,6 @@ setup(name='maurits.i18ntalk',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript", "lingua"],
+      setup_requires=["PasteScript"],
       paster_plugins=["ZopeSkel"],
-      # message_extractors = {
-      #     'maurits/i18ntalk': [
-      #         ('**.py', 'lingua_python', None),
-      #         ('**.pt', 'lingua_xml', None),
-      #     ],
-      # },
       )
