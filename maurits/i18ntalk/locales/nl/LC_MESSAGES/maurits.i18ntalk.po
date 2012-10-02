@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-01 13:55+0000\n"
+"POT-Creation-Date: 2012-10-02 14:08+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -79,4 +79,8 @@ msgstr "Sterren"
 #: ./portlets/mybooks.pt:22
 msgid "This book has ${stars} stars."
 msgstr "Dit boek heeft ${stars} sterren."
+
+#: ./browser/bookview.pt:15
+msgid "This book has about <span>${DYNAMIC_CONTENT}</span> stars."
+msgstr "Dit boek heeft ongeveer <span>${DYNAMIC_CONTENT}</span> sterren."
 

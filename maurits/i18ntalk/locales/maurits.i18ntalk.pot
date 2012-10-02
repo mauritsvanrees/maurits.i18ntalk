@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-01 13:55+0000\n"
+"POT-Creation-Date: 2012-10-02 14:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,5 +79,9 @@ msgstr ""
 #: ./browser/bookview.pt:12
 #: ./portlets/mybooks.pt:22
 msgid "This book has ${stars} stars."
+msgstr ""
+
+#: ./browser/bookview.pt:15
+msgid "This book has about <span>${DYNAMIC_CONTENT}</span> stars."
 msgstr ""
 

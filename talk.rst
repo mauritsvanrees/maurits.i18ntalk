@@ -45,7 +45,49 @@ each time:
 Strings in templates
 --------------------
 
-TODO
+::
+
+  <html ...
+        i18n:domain="maurits.i18ntalk">
+
+    <span i18n:translate="">A simple message</span>
+
+    <span i18n:translate="">Label:</span> <tal:block tal:content="some_content" />
+
+    <p i18n:domain="plone" i18n:translate="">
+      A message in the plone domain.
+    </p>
+  </html>
+
+In the ``.pot/.po`` file it becomes this::
+
+  #: browser/test.pt:3
+  msgid "A simple message"
+  msgstr "Een eenvoudige boodschap"
+
+
+Dynamic content
+---------------
+
+::
+
+  <p i18n:translate="">
+    This book has
+    <span i18n:name="stars" tal:content="context/getStars" />
+    stars.
+  </p>
+
+  #: browser/test.pt:9
+  msgid "This book has ${stars} stars."
+  msgstr "Dit boek heeft ${stars} sterren."
+
+If you forget the ``i18n:name`` you get this in your ``.po`` file::
+
+  #: ./browser/bookview.pt:15
+  msgid "This book has <span>${DYNAMIC_CONTENT}</span> stars."
+  msgstr "Dit boek heeft <span>${DYNAMIC_CONTENT}</span> sterren."
+
+And this translation does not show up.
 
 
 Strings in Python
@@ -133,7 +175,6 @@ update_locales.sh::
   done
 
 
-
 buildout:cfg
 ------------
 
@@ -193,8 +234,44 @@ Just add a file::
 
   your/package/locales/nl/LC_MESSAGES/plone.po
 
-How to override existing translations.
+
+Overriding existing translations
+--------------------------------
+
+Order of loading::
+
+  $ cat parts/instance/etc/site.zcml 
+  <configure
+    ...
+    <!-- Load the configuration -->
+    <include files="package-includes/*-configure.zcml" />
+    <five:loadProducts />
+
+1. locales = ${buildout:directory}/locales
+
+2. zcml = your.package
+
+3. Products alphabetically until and including Products.CMFPlone
+
+4. packages with z3c.autoinclude
+
+5. rest of the Products
+
+6. i18n folders (done by PlacelessTranslationService)
+
 
 Expected changes in the future.
+-------------------------------
 
-Answering questions.
+- No more ``i18n:translate="some_message_id"``.
+
+- Babel instead of i18ndude?
+
+- Sprint: support extracting zcml in i18ndude?
+  Code: https://github.com/collective/i18ndude
+
+
+Questions
+---------
+
+Was anything unclear?  Anything you have missed?
