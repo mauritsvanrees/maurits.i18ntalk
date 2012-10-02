@@ -16,7 +16,7 @@
    <portlet
      addview="maurits.i18ntalk.portlets.MyBooks"
      title="My Books"
-     description="Show your my books"
+     description="Show your latest books"
      i18n:attributes="title; description"
    />
 

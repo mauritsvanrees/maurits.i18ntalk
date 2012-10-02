@@ -149,7 +149,27 @@ Explicit translations
 Strings in GenericSetup
 -----------------------
 
-TODO
+``profiles/default/types/Book.xml``::
+
+  <?xml version="1.0"?>
+  <object name="Book"
+     meta_type="Factory-based Type Information with dynamic views"
+     i18n:domain="maurits.i18ntalk"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    <property name="title" i18n:translate="">Book</property>
+    <property name="description"
+      i18n:translate="">Information about a book</property>
+
+Problems:
+
+- Is it used?
+
+- Which domain?
+  http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
+
+- How to extract?
+
+.. image:: images/portal_types_domain.png
 
 
 Strings in ZCML

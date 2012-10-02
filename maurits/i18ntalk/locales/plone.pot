@@ -25,3 +25,11 @@ msgstr ""
 #: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
 msgid "you_are_here"
 msgstr ""
+
+#: profiles/default/portlets.xml
+msgid "My Books"
+msgstr ""
+
+#: profiles/default/portlets.xml
+msgid "Show your latest books"
+msgstr ""

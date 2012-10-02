@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-02 14:58+0000\n"
+"POT-Creation-Date: 2012-10-02 15:08+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"

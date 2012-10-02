@@ -19,6 +19,14 @@ msgstr ""
 msgid "A random extra translation in the plone domain."
 msgstr "Een willekeurige extra vertaling in het plone domein."
 
+#: profiles/default/portlets.xml
+msgid "My Books"
+msgstr "Mijn boeken"
+
+#: profiles/default/portlets.xml
+msgid "Show your latest books"
+msgstr "Toon je meest recente boeken"
+
 #. Default: "You are here:"
 #. This is an override for an existing plone translation.
 #: plone.app.layout/plone/app/layout/viewlets/path_bar.pt:6
