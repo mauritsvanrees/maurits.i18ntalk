@@ -27,7 +27,3 @@ msgstr ""
 #: ./browser/configure.zcml
 msgid "Book View"
 msgstr ""
-
-#: ./browser/configure.zcml
-msgid "Custom book view"
-msgstr ""
