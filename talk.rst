@@ -66,8 +66,8 @@ In the ``.pot/.po`` file it becomes this::
   msgstr "Een eenvoudige boodschap"
 
 
-Dynamic content
----------------
+Dynamic content in templates
+----------------------------
 
 ::
 
@@ -93,7 +93,57 @@ And this translation does not show up.
 Strings in Python
 -----------------
 
-TODO
+``__init__.py``::
+
+  from zope.i18nmessageid import MessageFactory
+  i18ntalkMessageFactory = MessageFactory('maurits.i18ntalk')
+
+In your python file::
+
+  from maurits.i18ntalk import i18ntalkMessageFactory as _
+
+  def title(self):
+      return _(u"My latest books")
+
+In a template::
+
+  <span tal:content="view/title" />
+
+
+Dynamic content in templates
+----------------------------
+
+::
+
+  def book_message(self):
+      context = aq_inner(self.context)
+      catalog = getToolByName(context, 'portal_catalog')
+      books = len(catalog(portal_type='Book'))
+      return _(u"There are ${books} books in total.",
+               mapping={'books': books})
+
+In a template::
+
+  <span tal:content="view/title" />
+
+po file::
+
+  #: ./portlets/mybooks.py:77
+  msgid "There are ${books} books in total."
+  msgstr "Er zijn in totaal ${books} boeken."
+
+
+Explicit translations
+---------------------
+
+::
+
+  from zope.i18n import translate
+  # def translate(msgid, domain=None, mapping=None,
+  #   context=None, target_language=None, default=None):
+  logger.info(translate(
+      _("My books portlet is displayed."),
+      context=self.request))
 
 
 Strings in GenericSetup

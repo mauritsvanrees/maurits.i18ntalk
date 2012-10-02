@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-02 14:08+0000\n"
+"POT-Creation-Date: 2012-10-02 14:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: maurits.i18ntalk\n"
 
-#: ./portlets/mybooks.pt:18
+#: ./portlets/mybooks.pt:16
 msgid "${author}: ${title}"
 msgstr ""
 
@@ -60,15 +60,19 @@ msgstr ""
 msgid "Maurits i18n talk"
 msgstr ""
 
-#: ./portlets/mybooks.py:26
+#: ./portlets/mybooks.py:30
 msgid "Maximum number of books to show"
 msgstr ""
 
-#: ./portlets/mybooks.pt:6
+#: ./portlets/mybooks.py:76
+msgid "My books portlet is displayed."
+msgstr ""
+
+#: ./portlets/mybooks.py:78
 msgid "My latest books"
 msgstr ""
 
-#: ./portlets/mybooks.py:25
+#: ./portlets/mybooks.py:29
 msgid "Number of books"
 msgstr ""
 
@@ -76,8 +80,12 @@ msgstr ""
 msgid "Stars"
 msgstr ""
 
+#: ./portlets/mybooks.py:84
+msgid "There are ${books} books in total."
+msgstr ""
+
 #: ./browser/bookview.pt:12
-#: ./portlets/mybooks.pt:22
+#: ./portlets/mybooks.pt:20
 msgid "This book has ${stars} stars."
 msgstr ""
 

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-02 14:08+0000\n"
+"POT-Creation-Date: 2012-10-02 14:58+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: maurits.i18ntalk\n"
 
-#: ./portlets/mybooks.pt:18
+#: ./portlets/mybooks.pt:16
 msgid "${author}: ${title}"
 msgstr "${author}: ${title}"
 
@@ -59,15 +59,19 @@ msgstr "Informatie over een boek"
 msgid "Maurits i18n talk"
 msgstr "i18n-presentatie van Maurits"
 
-#: ./portlets/mybooks.py:26
+#: ./portlets/mybooks.py:30
 msgid "Maximum number of books to show"
 msgstr "Maximum aantal boeken om te tonen"
 
-#: ./portlets/mybooks.pt:6
+#: ./portlets/mybooks.py:76
+msgid "My books portlet is displayed."
+msgstr "Mijn boekenportlet wordt getoond."
+
+#: ./portlets/mybooks.py:78
 msgid "My latest books"
 msgstr "Mijn laatste boeken"
 
-#: ./portlets/mybooks.py:25
+#: ./portlets/mybooks.py:29
 msgid "Number of books"
 msgstr "Aantal boeken"
 
@@ -75,8 +79,12 @@ msgstr "Aantal boeken"
 msgid "Stars"
 msgstr "Sterren"
 
+#: ./portlets/mybooks.py:84
+msgid "There are ${books} books in total."
+msgstr "Er zijn in totaal ${books} boeken."
+
 #: ./browser/bookview.pt:12
-#: ./portlets/mybooks.pt:22
+#: ./portlets/mybooks.pt:20
 msgid "This book has ${stars} stars."
 msgstr "Dit boek heeft ${stars} sterren."
 

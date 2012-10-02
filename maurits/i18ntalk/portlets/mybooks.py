@@ -1,3 +1,5 @@
+import logging
+
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -5,12 +7,14 @@ from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from zope import schema
 from zope.formlib import form
+from zope.i18n import translate
 from zope.i18nmessageid import MessageFactory
 from zope.interface import implements
 
 from maurits.i18ntalk import i18ntalkMessageFactory as _
 
 __ = MessageFactory("plone")
+logger = logging.getLogger('portletlogger')
 
 
 class IMyBooks(IPortletDataProvider):
@@ -66,6 +70,19 @@ class Renderer(base.Renderer):
         catalog = getToolByName(context, 'portal_catalog')
         books = catalog(portal_type='Book', sort_on='created', sort_order='reverse')
         return books[:self.data.maximum]
+
+    def title(self):
+        logger.info(translate(
+            _("My books portlet is displayed."),
+            context=self.request))
+        return _(u"My latest books")
+
+    def book_message(self):
+        context = aq_inner(self.context)
+        catalog = getToolByName(context, 'portal_catalog')
+        books = len(catalog(portal_type='Book'))
+        return _(u"There are ${books} books in total.",
+                 mapping={'books': books})
 
 
 class AddForm(base.AddForm):
