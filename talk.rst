@@ -147,6 +147,17 @@ buildout:cfg
       zope_i18n_allowed_languages en nl
       zope_i18n_compile_mo_files true
 
+The locales option is there since Plone 4.2.1.
+
+If you specify PTS_LANGUAGES and do *not* specify
+zope_i18n_allowed_languages, then you will use about 50 MB more
+memory.  So either specify them both or not at all.
+
+Note that on Plone 3 the ``zope_i18n_*`` options have no effect.
+Specifying PTS_LANGUAGES actually *increases* your memory usage by about
+6 MB in Plone 3.3.  In Plone 3.1 it reduces it by about 7 MB.  If you
+use add-ons, these numbers will increase.  I have seen a 30 MB difference.
+
 
 Releasing a package with compiled files, using zest.pocompile and MANIFEST.in.
 
