@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-This module contains the tool of maurits.i18ntalk
-"""
 from setuptools import setup, find_packages
-
 
 tests_require = ['zope.testing']
 
@@ -43,6 +39,12 @@ setup(name='maurits.i18ntalk',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
+      setup_requires=["PasteScript", "lingua"],
       paster_plugins=["ZopeSkel"],
+      # message_extractors = {
+      #     'maurits/i18ntalk': [
+      #         ('**.py', 'lingua_python', None),
+      #         ('**.pt', 'lingua_xml', None),
+      #     ],
+      # },
       )
