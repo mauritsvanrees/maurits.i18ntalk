@@ -171,6 +171,18 @@ Problems:
 
 - How to extract without extracting too much?
 
+In GenericSetup files, use your own domain for::
+
+  actions.xml
+  controlpanel.xml
+  types/YourType.xml
+
+In GenericSetup files, use the plone domain for::
+
+  portal_atct.xml
+  portlets.xml
+  workflows/your_workflow/definition.xml
+
 
 Strings in ZCML
 ---------------
@@ -190,6 +202,36 @@ Strings in ZCML
         />
 
 - How to extract?  i18ndude does not support this (yet).
+
+
+Display menu item
+-----------------
+
+.. image:: images/display_menu_item.png
+
+::
+
+  <configure
+      xmlns="http://namespaces.zope.org/zope"
+      xmlns:browser="http://namespaces.zope.org/browser"
+      i18n_domain="maurits.i18ntalk">
+    <include package="plone.app.contentmenu" />
+    <browser:page
+        for="maurits.i18ntalk.interfaces.IBook"
+        name="book_view"
+        class=".bookview.BookView"
+        template="bookview.pt"
+        permission="zope.Public"
+        />
+    <browser:menuItem
+        for="maurits.i18ntalk.interfaces.IBook"
+        menu="plone_displayviews"
+        title="Book View"
+        action="@@book_view"
+        />
+  </configure>
+
+.. The ``@@`` signs are optional.
 
 
 The structure and contents of the locales directory.
