@@ -434,7 +434,6 @@ Babel instead of i18ndude
   [extract_messages]
   keywords = _
   mapping_file = extract.ini
-  width = 80
   output_file = maurits/i18ntalk/locales/maurits.i18ntalk.pot
   sort_output = true
 
