@@ -16,21 +16,16 @@
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
-      title="Maurits i18n talk"
+      title="Maurits' i18n talk"
       directory="profiles/default"
-      description="Demo package for i18n talk of Maurits at ploneconf 2012"
+      description="Demo package for i18n talk by Maurits at ploneconf 2012"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
   <!-- -*- extra stuff goes here -*- -->
 
   <i18n:registerTranslations directory="locales" />
-
-
   <include package=".browser" />
-
-
   <include package=".portlets" />
-
 
 </configure>

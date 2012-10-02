@@ -16,12 +16,12 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: maurits.i18ntalk\n"
 
-#: ./browser/configure.zcml
-msgid "Maurits i18n talk"
+#: ./configure.zcml
+msgid "Maurits' i18n talk"
 msgstr ""
 
-#: ./browser/configure.zcml
-msgid "Demo package for i18n talk of Maurits at ploneconf 2012"
+#: ./configure.zcml
+msgid "Demo package for i18n talk by Maurits at ploneconf 2012"
 msgstr ""
 
 #: ./browser/configure.zcml

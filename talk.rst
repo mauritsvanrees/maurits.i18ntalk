@@ -160,6 +160,8 @@ Strings in GenericSetup
     <property name="description"
       i18n:translate="">Information about a book</property>
 
+.. image:: images/portal_types_domain.png
+
 Problems:
 
 - Is it used?
@@ -167,15 +169,27 @@ Problems:
 - Which domain?
   http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
 
-- How to extract?
-
-.. image:: images/portal_types_domain.png
+- How to extract without extracting too much?
 
 
 Strings in ZCML
 ---------------
 
-TODO
+``configure.zcml``::
+
+  <configure
+      xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+      i18n_domain="maurits.i18ntalk">
+
+    <genericsetup:registerProfile
+        name="default"
+        title="Maurits' i18n talk"
+        directory="profiles/default"
+        description="Demo package for i18n talk by Maurits at ploneconf 2012"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+- How to extract?  i18ndude does not support this (yet).
 
 
 The structure and contents of the locales directory.
