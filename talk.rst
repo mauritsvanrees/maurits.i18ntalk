@@ -417,18 +417,51 @@ Order of loading::
 6. i18n folders (done by PlacelessTranslationService)
 
 
+Babel instead of i18ndude
+-------------------------
+
+``buildout.cfg``::
+
+  [babelpy]
+  recipe = zc.recipe.egg
+  eggs =
+      babel
+      lingua
+  interpreter = babelpy
+
+``setup.cfg``::
+
+  [extract_messages]
+  keywords = _
+  mapping_file = extract.ini
+  width = 80
+  output_file = maurits/i18ntalk/locales/maurits.i18ntalk.pot
+
+``extract.ini``::
+
+  [lingua_python: **.py]
+
+  [lingua_xml: **.pt]
+
+  [lingua_xml: **.xml]
+
+  [lingua_zcml: **.zcml]
+
+Usage::
+
+  bin/babelpy setup.py extract_messages
+
+- Good: has zcml support
+
+- Bad: currently extracts *all* domains
+
+
 Expected changes in the future.
 -------------------------------
 
 - No more ``i18n:translate="some_message_id"``.
 
 - Babel instead of i18ndude?
-
-  - Good: has zcml support
-
-  - Bad: currently extracts *all* domains
-
-  - See ``setup.cfg`` and ``extract.ini``.
 
 - Sprint: support extracting zcml in i18ndude?
   Code: https://github.com/collective/i18ndude
