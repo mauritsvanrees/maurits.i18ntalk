@@ -301,6 +301,35 @@ update_locales.sh::
   done
 
 
+Headers
+-------
+
+::
+
+  # Maurits van Rees <maurits@vanrees.org>, 2012.
+  msgid ""
+  msgstr ""
+  "Project-Id-Version: maurits.i18ntalk 1.0\n"
+  "POT-Creation-Date: 2012-10-02 15:46+0000\n"
+  "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
+  "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
+  "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
+  "MIME-Version: 1.0\n"
+  "Content-Type: text/plain; charset=utf-8\n"
+  "Content-Transfer-Encoding: 8bit\n"
+  "Plural-Forms: nplurals=1; plural=0\n"
+  "Language-Code: nl\n"
+  "Language-Name: Nederlands\n"
+  "Preferred-Encodings: utf-8 latin1\n"
+  "Domain: maurits.i18ntalk\n"
+
+Language-Code and Domain are ignored in locales.
+
+Check it::
+
+  msgfmt -c locales/nl/LC_MESSAGES/maurits.i18ntalk.po
+
+
 buildout:cfg
 ------------
 
@@ -373,7 +402,7 @@ Order of loading::
     <include files="package-includes/*-configure.zcml" />
     <five:loadProducts />
 
-1. locales = ${buildout:directory}/locales
+1. locales = ``${buildout:directory}/locales``
 
 2. zcml = your.package
 
