@@ -134,7 +134,19 @@ update_locales.sh::
 
 
 
-buildout:cfg: compiling mo files at startup and registering an extra locales directory.
+buildout:cfg
+------------
+
+.. ::
+
+  [instance]
+  recipe = plone.recipe.zope2instance
+  locales = ${buildout:directory}/locales
+  environment-vars =
+      PTS_LANGUAGES en nl
+      zope_i18n_allowed_languages en nl
+      zope_i18n_compile_mo_files true
+
 
 Releasing a package with compiled files, using zest.pocompile and MANIFEST.in.
 
