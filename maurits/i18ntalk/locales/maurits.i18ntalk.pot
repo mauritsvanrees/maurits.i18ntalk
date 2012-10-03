@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-03 13:07+0000\n"
+"POT-Creation-Date: 2012-10-03 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Author of this book"
 msgstr ""
 
-#: ./browser/bookview.pt:11
+#: ./browser/bookview.pt:12
 msgid "Author:"
 msgstr ""
 
@@ -80,17 +80,17 @@ msgstr ""
 msgid "There are ${books} books in total."
 msgstr ""
 
-#: ./browser/bookview.pt:13
+#: ./browser/bookview.pt:18
 #: ./portlets/mybooks.pt:20
 msgid "This book has ${stars} stars."
 msgstr ""
 
-#: ./browser/bookview.pt:18
-msgid "This book has about <span>${DYNAMIC_CONTENT}</span> stars."
+#: ./browser/bookview.pt:29
+msgid "This book has about ${DYNAMIC_CONTENT} stars."
 msgstr ""
 
 #. Default: "This is a message."
-#: ./browser/bookview.pt:15
+#: ./browser/bookview.pt:24
 msgid "msg_string"
 msgstr ""
 

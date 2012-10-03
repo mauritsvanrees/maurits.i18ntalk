@@ -107,8 +107,6 @@ These are not used::
   msgstr "Dit is een boodschap."
 
 
-
-
 Dynamic content in templates
 ----------------------------
 
@@ -116,7 +114,8 @@ Dynamic content in templates
 
   <p i18n:translate="">
     This book has
-    <span i18n:name="stars" tal:content="context/getStars" />
+    <tal:block i18n:name="stars"
+               tal:content="context/getStars" />
     stars.
   </p>
 
@@ -126,9 +125,8 @@ Dynamic content in templates
 
 If you forget the ``i18n:name`` you get this in your ``.po`` file::
 
-  #: ./browser/bookview.pt:15
-  msgid "This book has <span>${DYNAMIC_CONTENT}</span> stars."
-  msgstr "Dit boek heeft <span>${DYNAMIC_CONTENT}</span> sterren."
+  msgid "This book has ${DYNAMIC_CONTENT} stars."
+  msgstr "Dit boek heeft ${DYNAMIC_CONTENT} sterren."
 
 And this translation does not show up.
 

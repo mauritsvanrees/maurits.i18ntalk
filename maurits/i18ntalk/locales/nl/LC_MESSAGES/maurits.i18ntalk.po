@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-03 13:07+0000\n"
+"POT-Creation-Date: 2012-10-03 13:38+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -27,7 +27,7 @@ msgstr "Auteur"
 msgid "Author of this book"
 msgstr "Auteur van dit boek"
 
-#: ./browser/bookview.pt:11
+#: ./browser/bookview.pt:12
 msgid "Author:"
 msgstr "Auteur:"
 
@@ -79,17 +79,17 @@ msgstr "Sterren"
 msgid "There are ${books} books in total."
 msgstr "Er zijn in totaal ${books} boeken."
 
-#: ./browser/bookview.pt:13
+#: ./browser/bookview.pt:18
 #: ./portlets/mybooks.pt:20
 msgid "This book has ${stars} stars."
 msgstr "Dit boek heeft ${stars} sterren."
 
-#: ./browser/bookview.pt:18
-msgid "This book has about <span>${DYNAMIC_CONTENT}</span> stars."
-msgstr "Dit boek heeft ongeveer <span>${DYNAMIC_CONTENT}</span> sterren."
+#: ./browser/bookview.pt:29
+msgid "This book has about ${DYNAMIC_CONTENT} stars."
+msgstr ""
 
 #. Default: "This is a message."
-#: ./browser/bookview.pt:15
+#: ./browser/bookview.pt:24
 msgid "msg_string"
 msgstr "Dit is een boodschap."
 
