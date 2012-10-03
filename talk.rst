@@ -232,21 +232,23 @@ http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
 Strings in ZCML
 ---------------
 
-``configure.zcml``::
+::
 
   <configure
-      xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-      i18n_domain="maurits.i18ntalk">
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    i18n_domain="maurits.i18ntalk">
 
-    <genericsetup:registerProfile
-        name="default"
-        title="Maurits' i18n talk"
-        directory="profiles/default"
-        description="Demo package for i18n talk by Maurits at ploneconf 2012"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
+    <gs:registerProfile
+      name="default"
+      title="Maurits' i18n talk"
+      directory="profiles/default"
+      description="Demo package by Maurits"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 
-- How to extract?  i18ndude does not support this (yet).
+  </configure>
+
+- How to extract?  ``i18ndude`` does not support this (yet).
 
 
 Display menu item
