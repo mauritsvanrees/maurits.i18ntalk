@@ -79,6 +79,10 @@ Strings in templates
     </p>
   </html>
 
+
+Extracted messages
+------------------
+
 In the ``.pot/.po`` file it becomes this::
 
   #: browser/test.pt:3
@@ -88,7 +92,21 @@ In the ``.pot/.po`` file it becomes this::
   #. Default: "This is a message string."
   #: ./browser/bookview.pt:14
   msgid "msg_string"
-  msgstr ""
+  msgstr "Dit is een boodschap."
+
+
+Fuzzy messages
+--------------
+
+These are not used::
+
+  #. Default: "This is a message."
+  #: ./browser/bookview.pt:15
+  #, fuzzy
+  msgid "msg_string"
+  msgstr "Dit is een boodschap."
+
+
 
 
 Dynamic content in templates
@@ -480,12 +498,14 @@ Usage::
 Expected changes in the future.
 -------------------------------
 
-- No more ``i18n:translate="some_message_id"``.
+- `No more`_ ``i18n:translate="some_message_id"``.
 
 - Babel instead of i18ndude?
 
 - Sprint: support extracting zcml in i18ndude?
   Code: https://github.com/collective/i18ndude
+
+.. _`No more`: http://plone-regional-forums.221720.n2.nabble.com/Plone-s-gettext-approach-and-its-impact-on-translation-td5670027.html
 
 
 Questions

@@ -12,7 +12,7 @@
           <div tal:content="context/Description" />
           <p i18n:translate="">This book has <span class="stars" i18n:name="stars" tal:content="context/getStars" /> stars.</p>
 
-          <p i18n:translate="msg_string">This is a message string.</p>
+          <p i18n:translate="msg_string">This is a message.</p>
 
           <!-- This will not show up translated, because the i18n:name is missing: -->
           <p i18n:translate="">This book has about <span tal:content="context/getStars" /> stars.</p>
