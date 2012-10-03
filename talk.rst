@@ -256,27 +256,28 @@ Display menu item
 
 .. image:: static/display_menu_item.png
 
+
+Display menu item (2)
+---------------------
+
 ::
 
-  <configure
-      xmlns="http://namespaces.zope.org/zope"
+  <configure xmlns="http://namespaces.zope.org/zope"
       xmlns:browser="http://namespaces.zope.org/browser"
       i18n_domain="maurits.i18ntalk">
     <include package="plone.app.contentmenu" />
     <browser:page
         for="maurits.i18ntalk.interfaces.IBook"
         name="book_view"
-        class=".bookview.BookView"
-        template="bookview.pt"
-        permission="zope.Public"
-        />
+        ... />
     <browser:menuItem
         for="maurits.i18ntalk.interfaces.IBook"
         menu="plone_displayviews"
         title="Book View"
-        action="@@book_view"
-        />
+        action="@@book_view" />
   </configure>
+
+  msgid "Book View"
 
 .. The ``@@`` signs are optional.
 
