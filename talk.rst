@@ -6,11 +6,19 @@ Internationalization in your package
 
 Maurits van Rees
 
-Zest Software
+Zest Software, The Netherlands
 
 Sample code:
 https://github.com/mauritsvanrees/maurits.i18ntalk
 
+.. image:: static/zest-logo.jpg
+
+
+Contents
+--------
+
+.. I probably want to replace this with something nicer, but for now
+.. it will do.
 
 .. contents::
 
