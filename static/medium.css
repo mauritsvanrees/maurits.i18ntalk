@@ -1,11 +1,10 @@
 body {
   font-size: 24pt;
-  color: #2193D1;
   margin-left: 10px;
 }
 
 .section {
-  background: transparent url(static/zet_klein.png) no-repeat scroll 98% 2%;
+  background: transparent url(zet_klein.png) no-repeat scroll 98% 2%;
   margin-top: 800px;
   margin-bottom: 800px;
   padding-top: 4px;
