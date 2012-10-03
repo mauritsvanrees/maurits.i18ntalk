@@ -1,15 +1,19 @@
 Internationalization in your package
 ====================================
 
-Maurits van Rees
+Maurits van Rees:
 
-Zest Software, The Netherlands
+  http://maurits.vanrees.org/
+
+Zest Software, The Netherlands:
+
+  http://zestsoftware.nl/
 
 .. image:: static/zest-logo.jpg
 
 Sample code, including this talk:
 
-https://github.com/mauritsvanrees/maurits.i18ntalk
+  https://github.com/mauritsvanrees/maurits.i18ntalk
 
 
 Contents
@@ -387,9 +391,9 @@ Register the locales in zcml.
 
 Note:
 
-- zcml: http://namespaces.zope.org/i18n
+- zcml: ``http://namespaces.zope.org/i18n``
 
-- html: http://xml.zope.org/namespaces/i18n
+- html: ``http://xml.zope.org/namespaces/i18n``
 
 
 buildout.cfg
@@ -537,17 +541,23 @@ Expected changes in the future.
 .. _`No more`: http://plone-regional-forums.221720.n2.nabble.com/Plone-s-gettext-approach-and-its-impact-on-translation-td5670027.html
 
 
-The end
--------
+``msgid "The end"``
+-------------------
 
-Het einde
+::
 
-Schluss
+  msgstr "Het einde"
 
-La fin
+  msgstr "Schluss"
 
-Los endos
+  msgstr "La fin"
 
-...
+  msgstr "Los endos"
+
+This talk plus the code:
 
 https://github.com/mauritsvanrees/maurits.i18ntalk
+
+An occasional blog entry about this Plone conference:
+
+http://maurits.vanrees.org/weblog/
