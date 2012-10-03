@@ -485,7 +485,7 @@ Be the first!  Order of loading::
 Babel instead of i18ndude
 -------------------------
 
-``buildout.cfg``::
+::
 
   [babelpy]
   recipe = zc.recipe.egg
@@ -493,17 +493,6 @@ Babel instead of i18ndude
       babel
       lingua
   interpreter = babelpy
-
-command line options or ``setup.cfg``::
-
-  [extract_messages]
-  mapping_file = extract.ini
-  output_file = ...../locales/maurits.i18ntalk.pot
-  sort_output = true
-
-
-mapping file for ``lingua``
----------------------------
 
 ``extract.ini``::
 
@@ -515,7 +504,18 @@ mapping file for ``lingua``
 
   [lingua_zcml: **.zcml]
 
-Usage: ``bin/babelpy setup.py extract_messages``
+
+Babel usage
+-----------
+
+``bin/babelpy setup.py extract_messages``
+
+command line options or ``setup.cfg``::
+
+  [extract_messages]
+  mapping_file = extract.ini
+  output_file = ...../locales/maurits.i18ntalk.pot
+  sort_output = true
 
 - Good: has zcml support
 
