@@ -11,4 +11,4 @@ The code is for Plone 4.x.
 
 See the `talk.rst`_ file for the contents of the talk (images will be missing).
 
-.. _`talk.rst`: ./talk.rst
+.. _`talk.rst`: talk.rst
