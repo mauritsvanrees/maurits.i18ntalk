@@ -194,33 +194,39 @@ Strings in GenericSetup
 
   <?xml version="1.0"?>
   <object name="Book"
-     meta_type="Factory-based Type Information with dynamic views"
+     meta_type="Factory-based Type Information
+                with dynamic views"
      i18n:domain="maurits.i18ntalk"
      xmlns:i18n="http://xml.zope.org/namespaces/i18n">
     <property name="title" i18n:translate="">Book</property>
     <property name="description"
       i18n:translate="">Information about a book</property>
 
+
+Is it used?
+-----------
+
 .. image:: static/portal_types_domain.png
 
-Problems:
 
-- Is it used?
+Which domain?
+-------------
 
-- Which domain?
-  http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
-
-In GenericSetup files, use your own domain for::
+Use your own domain for::
 
   actions.xml
   controlpanel.xml
   types/YourType.xml
 
-In GenericSetup files, use the plone domain for::
+Use the plone domain for::
 
   portal_atct.xml
   portlets.xml
   workflows/your_workflow/definition.xml
+
+When in doubt, use the plone domain.
+
+http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4
 
 
 Strings in ZCML
