@@ -26,12 +26,14 @@ Contents
 What is internationalization?
 -----------------------------
 
-``i18n`` means making the web interface appear translated in your local
-language instead of the default English.
+``i18n`` means making the web interface appear translated in your
+local language instead of the default English.
 
 No localization (``l10n``).
 
 No multilingual sites.
+
+``Plone 4.0-4.3``
 
 .. I will not talk about localization (``l10n``), which means making
 .. dates, times and currency appear in the format preferred in your
@@ -442,7 +444,7 @@ Just add a file::
 Overriding existing translations
 --------------------------------
 
-Order of loading::
+Be the first!  Order of loading::
 
   $ cat parts/instance/etc/site.zcml 
   <configure
@@ -451,17 +453,17 @@ Order of loading::
     <include files="package-includes/*-configure.zcml" />
     <five:loadProducts />
 
-1. locales = ``${buildout:directory}/locales``
+1. ``locales = ${buildout:directory}/locales``
 
-2. zcml = your.package
+2. ``zcml = your.package``
 
-3. Products alphabetically until and including Products.CMFPlone
+3. Products alphabetically until and including ``Products.CMFPlone``
 
-4. packages with z3c.autoinclude
+4. packages registered with ``z3c.autoinclude``
 
 5. rest of the Products
 
-6. i18n folders (done by PlacelessTranslationService)
+6. ``i18n`` folders (done by ``PlacelessTranslationService``)
 
 
 Babel instead of i18ndude
