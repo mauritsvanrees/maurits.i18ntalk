@@ -9,6 +9,6 @@ The code is for Plone 4.x.
 - Questions and comments to http://plone.org/support/forums/i18n
 - Report bugs at https://github.com/mauritsvanrees/maurits.i18ntalk
 
-See the `talk.rst`_ file for the contents of the talk (images will be missing).
+See the `talk.rst`_ file for the contents of the talk.
 
 .. _`talk.rst`: https://github.com/mauritsvanrees/maurits.i18ntalk/blob/master/talk.rst
