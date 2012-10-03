@@ -137,14 +137,14 @@ Strings in Python
 ``__init__.py``::
 
   from zope.i18nmessageid import MessageFactory
-  i18ntalkMessageFactory = MessageFactory('maurits.i18ntalk')
+  i18ntalkMF = MF('maurits.i18ntalk')
 
 In your python file::
 
-  from maurits.i18ntalk import i18ntalkMessageFactory as _
-
-  def title(self):
-      return _(u"My latest books")
+  from maurits.i18ntalk import i18ntalkMF as _
+  ...
+      def title(self):
+          return _(u"My latest books")
 
 In a template::
 
@@ -157,15 +157,13 @@ Dynamic content in Python
 ::
 
   def book_message(self):
-      context = aq_inner(self.context)
-      catalog = getToolByName(context, 'portal_catalog')
-      books = len(catalog(portal_type='Book'))
+      number = 42
       return _(u"There are ${books} books in total.",
-               mapping={'books': books})
+               mapping={'books': number})
 
 In a template::
 
-  <span tal:content="view/title" />
+  <span tal:content="view/book_message" />
 
 po file::
 
@@ -180,11 +178,13 @@ Explicit translations
 ::
 
   from zope.i18n import translate
+  msg = _("My books portlet is displayed.")
+  translation = translate(msg, context=self.request)
+  logger.info(translation)
+
+
   # def translate(msgid, domain=None, mapping=None,
   #   context=None, target_language=None, default=None):
-  logger.info(translate(
-      _("My books portlet is displayed."),
-      context=self.request))
 
 
 Strings in GenericSetup

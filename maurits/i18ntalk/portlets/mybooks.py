@@ -72,9 +72,11 @@ class Renderer(base.Renderer):
         return books[:self.data.maximum]
 
     def title(self):
-        logger.info(translate(
-            _("My books portlet is displayed."),
-            context=self.request))
+        # Log a translated message, just for the fun of it.
+        msg = _("My books portlet is displayed.")
+        translation = translate(msg, context=self.request)
+        logger.info(translation)
+        # And return a title.
         return _(u"My latest books")
 
     def book_message(self):
