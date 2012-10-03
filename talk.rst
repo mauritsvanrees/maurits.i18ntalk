@@ -516,6 +516,8 @@ Expected changes in the future.
 - Sprint: support extracting zcml in i18ndude?
   Code: https://github.com/collective/i18ndude
 
+- Sprint: improve babel or lingua?
+
 .. _`No more`: http://plone-regional-forums.221720.n2.nabble.com/Plone-s-gettext-approach-and-its-impact-on-translation-td5670027.html
 
 
