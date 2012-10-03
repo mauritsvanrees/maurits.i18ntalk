@@ -478,13 +478,16 @@ Babel instead of i18ndude
       lingua
   interpreter = babelpy
 
-``setup.cfg``::
+command line options or ``setup.cfg``::
 
   [extract_messages]
-  keywords = _
   mapping_file = extract.ini
-  output_file = maurits/i18ntalk/locales/maurits.i18ntalk.pot
+  output_file = ...../locales/maurits.i18ntalk.pot
   sort_output = true
+
+
+mapping file for ``lingua``
+---------------------------
 
 ``extract.ini``::
 
@@ -496,9 +499,7 @@ Babel instead of i18ndude
 
   [lingua_zcml: **.zcml]
 
-Usage::
-
-  bin/babelpy setup.py extract_messages
+Usage: ``bin/babelpy setup.py extract_messages``
 
 - Good: has zcml support
 
