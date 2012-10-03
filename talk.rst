@@ -1,30 +1,41 @@
 Internationalization in your package
 ====================================
 
-.. This may become the text of my talk.  Or the presentation that I
-.. will show.  I might switch to KeyNote or whatever.  We'll see.
-
 Maurits van Rees
 
 Zest Software, The Netherlands
 
-Sample code:
-https://github.com/mauritsvanrees/maurits.i18ntalk
-
 .. image:: static/zest-logo.jpg
+
+Sample code, including this talk:
+
+https://github.com/mauritsvanrees/maurits.i18ntalk
 
 
 Contents
 --------
 
-.. I probably want to replace this with something nicer, but for now
-.. it will do.
+- What is internationalization?
 
-.. contents::
+- Defining strings in templates, ``Python``, ``GenericSetup``,
+  ``XML``.
+
+- Extracting strings with ``i18ndude``.
+
+- Making Plone aware of the translations.
+
+- Overriding translations.
+
+- Future.
 
 
 What is internationalization?
 -----------------------------
+
+::
+
+  internationalization
+  i...18 characters..n
 
 ``i18n`` means making the web interface appear translated in your
 local language instead of the default English.
@@ -121,7 +132,6 @@ Dynamic content in templates
     stars.
   </p>
 
-  #: browser/test.pt:9
   msgid "This book has ${stars} stars."
   msgstr "Dit boek heeft ${stars} sterren."
 
@@ -182,6 +192,7 @@ Explicit translations
   from zope.i18n import translate
   msg = _("My books portlet is displayed.")
   translation = translate(msg, context=self.request)
+  logger = ...
   logger.info(translation)
 
 
@@ -284,8 +295,8 @@ Display menu item (2)
 .. The ``@@`` signs are optional.
 
 
-locales directory
------------------
+``locales`` directory
+---------------------
 
 ::
 
@@ -297,26 +308,6 @@ locales directory
   locales/nl/LC_MESSAGES
   locales/nl/LC_MESSAGES/yourdomain.po
   locales/nl/LC_MESSAGES/plone.po
-
-
-Register the locales in zcml.
------------------------------
-
-::
-
-  <configure
-      xmlns="http://namespaces.zope.org/zope"
-      xmlns:i18n="http://namespaces.zope.org/i18n">
-
-   <i18n:registerTranslations directory="locales" />
-
-  </configure>
-
-Note:
-
-- zcml: http://namespaces.zope.org/i18n
-
-- html: http://xml.zope.org/namespaces/i18n
 
 
 Installing i18ndude.
@@ -380,6 +371,27 @@ Check it
 
   rm messages.mo
 
+
+Register the locales in zcml.
+-----------------------------
+
+::
+
+  <configure
+      xmlns="http://namespaces.zope.org/zope"
+      xmlns:i18n="http://namespaces.zope.org/i18n">
+
+   <i18n:registerTranslations directory="locales" />
+
+  </configure>
+
+Note:
+
+- zcml: http://namespaces.zope.org/i18n
+
+- html: http://xml.zope.org/namespaces/i18n
+
+
 buildout.cfg
 ------------
 
@@ -408,6 +420,10 @@ buildout.cfg
 
 Include the mo files
 --------------------
+
+- in version control: no
+
+- released on PyPI: yes
 
 ``MANIFEST.in``::
 
@@ -493,7 +509,7 @@ mapping file for ``lingua``
 
   [lingua_python: **.py]
 
-  [lingua_xml: **.pt]
+  [lingua_xml: **pt]
 
   [lingua_xml: **.xml]
 
