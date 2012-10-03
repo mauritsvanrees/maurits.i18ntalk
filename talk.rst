@@ -164,7 +164,7 @@ Strings in GenericSetup
     <property name="description"
       i18n:translate="">Information about a book</property>
 
-.. image:: images/portal_types_domain.png
+.. image:: static/portal_types_domain.png
 
 Problems:
 
@@ -209,7 +209,7 @@ Strings in ZCML
 Display menu item
 -----------------
 
-.. image:: images/display_menu_item.png
+.. image:: static/display_menu_item.png
 
 ::
 
