@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maurits.i18ntalk 1.0\n"
-"POT-Creation-Date: 2012-10-03 13:38+0000\n"
+"POT-Creation-Date: 2012-10-03 14:36+0000\n"
 "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
 "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
 "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
@@ -63,7 +63,7 @@ msgstr "Maximum aantal boeken om te tonen"
 msgid "My books portlet is displayed."
 msgstr "Mijn boekenportlet wordt getoond."
 
-#: ./portlets/mybooks.py:78
+#: ./portlets/mybooks.py:80
 msgid "My latest books"
 msgstr "Mijn laatste boeken"
 
@@ -75,7 +75,7 @@ msgstr "Aantal boeken"
 msgid "Stars"
 msgstr "Sterren"
 
-#: ./portlets/mybooks.py:84
+#: ./portlets/mybooks.py:86
 msgid "There are ${books} books in total."
 msgstr "Er zijn in totaal ${books} boeken."
 
@@ -84,12 +84,12 @@ msgstr "Er zijn in totaal ${books} boeken."
 msgid "This book has ${stars} stars."
 msgstr "Dit boek heeft ${stars} sterren."
 
-#: ./browser/bookview.pt:29
+#: ./browser/bookview.pt:28
 msgid "This book has about ${DYNAMIC_CONTENT} stars."
 msgstr ""
 
 #. Default: "This is a message."
-#: ./browser/bookview.pt:24
+#: ./browser/bookview.pt:23
 msgid "msg_string"
 msgstr "Dit is een boodschap."
 

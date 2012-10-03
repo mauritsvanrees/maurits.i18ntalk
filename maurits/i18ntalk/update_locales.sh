@@ -1,21 +1,22 @@
 #! /bin/sh
 
 DOMAIN="maurits.i18ntalk"
+I18NDUDE="../../bin/i18ndude"
 
-# Synchronise the templates and scripts with the .pot.  All on one
-# line normally.  And notice the dot at the end, for the current
-# directory.
-i18ndude rebuild-pot --pot locales/${DOMAIN}.pot \
+# Rebuild the .pot file using the current messages from templates,
+# scripts, xml.  And merge with manual.pot.  All on one line normally.
+# Notice the dot at the end, for the current directory.
+$I18NDUDE rebuild-pot --pot locales/${DOMAIN}.pot \
     --create ${DOMAIN} \
     --merge locales/manual.pot \
     .
 
 # Synchronise the resulting .pot with all .po files
 for po in locales/*/LC_MESSAGES/${DOMAIN}.po; do
-    i18ndude sync --pot locales/${DOMAIN}.pot $po
+    $I18NDUDE sync --pot locales/${DOMAIN}.pot $po
 done
 
 # Same for the plone domain.
 for po in locales/*/LC_MESSAGES/plone.po; do
-    i18ndude sync --pot locales/plone.pot $po
+    $I18NDUDE sync --pot locales/plone.pot $po
 done
