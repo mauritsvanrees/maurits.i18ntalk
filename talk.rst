@@ -519,7 +519,17 @@ Expected changes in the future.
 .. _`No more`: http://plone-regional-forums.221720.n2.nabble.com/Plone-s-gettext-approach-and-its-impact-on-translation-td5670027.html
 
 
-Questions
----------
+The end
+-------
 
-Was anything unclear?  Anything you have missed?
+Het einde
+
+Schluss
+
+La fin
+
+Los endos
+
+...
+
+https://github.com/mauritsvanrees/maurits.i18ntalk
