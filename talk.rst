@@ -353,10 +353,10 @@ Headers
   msgid ""
   msgstr ""
   "Project-Id-Version: maurits.i18ntalk 1.0\n"
-  "POT-Creation-Date: 2012-10-02 15:46+0000\n"
-  "PO-Revision-Date: 2012-10-01 13:49 +0200\n"
-  "Last-Translator: Maurits van Rees <maurits@vanrees.org>\n"
-  "Language-Team: Plone Nederland <plone-nl@lists.plone.org>\n"
+  "POT-Creation-Date: 2012-10-03 14:36+0000\n"
+  "PO-Revision-Date: 2012-10-03 16:39 +0200\n"
+  "Last-Translator: Maurits <maurits@vanrees.org>\n"
+  "Language-Team: Plone NL <plone-nl@lists.plone.org>\n"
   "MIME-Version: 1.0\n"
   "Content-Type: text/plain; charset=utf-8\n"
   "Content-Transfer-Encoding: 8bit\n"
@@ -366,14 +366,19 @@ Headers
   "Preferred-Encodings: utf-8 latin1\n"
   "Domain: maurits.i18ntalk\n"
 
-Language-Code and Domain are ignored in locales.
+.. Language-Code and Domain are ignored in locales.
 
-Check it::
+
+Check it
+--------
+
+::
 
   msgfmt -c locales/nl/LC_MESSAGES/maurits.i18ntalk.po
 
+  rm messages.mo
 
-buildout:cfg
+buildout.cfg
 ------------
 
 ::
@@ -386,16 +391,17 @@ buildout:cfg
       zope_i18n_allowed_languages en nl
       zope_i18n_compile_mo_files true
 
-The locales option is there since Plone 4.2.1.
+.. The locales option is there since Plone 4.2.1.
 
-If you specify PTS_LANGUAGES and do *not* specify
-zope_i18n_allowed_languages, then you will use about 50 MB more
-memory.  So either specify them both or not at all.
+.. If you specify PTS_LANGUAGES and do *not* specify
+.. zope_i18n_allowed_languages, then you will use about 50 MB more
+.. memory.  So either specify them both or not at all.
 
-Note that on Plone 3 the ``zope_i18n_*`` options have no effect.
-Specifying PTS_LANGUAGES actually *increases* your memory usage by about
-6 MB in Plone 3.3.  In Plone 3.1 it reduces it by about 7 MB.  If you
-use add-ons, these numbers will increase.  I have seen a 30 MB difference.
+.. Note that on Plone 3 the ``zope_i18n_*`` options have no effect.
+.. Specifying PTS_LANGUAGES actually *increases* your memory usage by
+.. about 6 MB in Plone 3.3.  In Plone 3.1 it reduces it by about 7 MB.
+.. If you use add-ons, these numbers will increase.  I have seen a 30
+.. MB difference.
 
 
 Include the mo files
