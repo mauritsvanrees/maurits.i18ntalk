@@ -9,7 +9,7 @@ Zest Software, The Netherlands:
 
   http://zestsoftware.nl/
 
-.. image:: static/zest-logo.jpg
+.. image:: https://raw.github.com/mauritsvanrees/maurits.i18ntalk/master/static/zest-logo.jpg
 
 Sample code, including this talk:
 
@@ -223,7 +223,7 @@ Strings in GenericSetup
 Is it used?
 -----------
 
-.. image:: static/portal_types_domain.png
+.. image:: https://raw.github.com/mauritsvanrees/maurits.i18ntalk/master/static/portal_types_domain.png
 
 
 Which domain?
@@ -271,7 +271,7 @@ Strings in ZCML
 Display menu item
 -----------------
 
-.. image:: static/display_menu_item.png
+.. image:: https://raw.github.com/mauritsvanrees/maurits.i18ntalk/master/static/display_menu_item.png
 
 
 Display menu item (2)
