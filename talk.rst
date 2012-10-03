@@ -29,13 +29,17 @@ What is internationalization?
 ``i18n`` means making the web interface appear translated in your local
 language instead of the default English.
 
-I will not talk about localization (``l10n``), which means making dates,
-times and currency appear in the format preferred in your local
-language.
+No localization (``l10n``).
 
-This is also not about multilingual sites, sites that have content in
-both English and Dutch.  See ``Products.LinguaPlone`` or
-``plone.app.multilingual`` for that.
+No multilingual sites.
+
+.. I will not talk about localization (``l10n``), which means making
+.. dates, times and currency appear in the format preferred in your
+.. local language.
+
+.. This is also not about multilingual sites, sites that have content
+.. in both English and Dutch.  See ``Products.LinguaPlone`` or
+.. ``plone.app.multilingual`` for that.
 
 .. Maybe add two screen shots, in English and Dutch, just to make it
 .. really clear.
@@ -44,8 +48,8 @@ both English and Dutch.  See ``Products.LinguaPlone`` or
 Procedure
 ---------
 
-If you add new strings in your package, you need to follow these steps
-each time:
+.. If you add new strings in your package, you need to follow these
+.. steps each time:
 
 1. Make strings translatable.
 
@@ -60,11 +64,15 @@ Strings in templates
 ::
 
   <html ...
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         i18n:domain="maurits.i18ntalk">
 
     <span i18n:translate="">A simple message</span>
 
-    <span i18n:translate="">Label:</span> <tal:block tal:content="some_content" />
+    <p i18n:translate="msg_string">This is a message.</p>
+
+    <span i18n:translate="">Label:</span>
+    <tal:block tal:content="some_content" />
 
     <p i18n:domain="plone" i18n:translate="">
       A message in the plone domain.
@@ -76,6 +84,11 @@ In the ``.pot/.po`` file it becomes this::
   #: browser/test.pt:3
   msgid "A simple message"
   msgstr "Een eenvoudige boodschap"
+
+  #. Default: "This is a message string."
+  #: ./browser/bookview.pt:14
+  msgid "msg_string"
+  msgstr ""
 
 
 Dynamic content in templates
