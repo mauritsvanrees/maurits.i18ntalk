@@ -282,8 +282,8 @@ Display menu item (2)
 .. The ``@@`` signs are optional.
 
 
-The structure and contents of the locales directory.
-----------------------------------------------------
+locales directory
+-----------------
 
 ::
 
@@ -309,6 +309,12 @@ Register the locales in zcml.
    <i18n:registerTranslations directory="locales" />
 
   </configure>
+
+Note:
+
+- zcml: http://namespaces.zope.org/i18n
+
+- html: http://xml.zope.org/namespaces/i18n
 
 
 Installing i18ndude.
