@@ -58,9 +58,6 @@ No multilingual sites.
 .. in both English and Dutch.  See ``Products.LinguaPlone`` or
 .. ``plone.app.multilingual`` for that.
 
-.. Maybe add two screen shots, in English and Dutch, just to make it
-.. really clear.
-
 
 Procedure
 ---------
@@ -177,26 +174,16 @@ Dynamic content in Python
       return _(u"There are ${books} books in total.",
                mapping={'books': number})
 
-In a template::
-
-  <span tal:content="view/book_message" />
-
-po file::
-
-  #: ./portlets/mybooks.py:77
-  msgid "There are ${books} books in total."
-  msgstr "Er zijn in totaal ${books} boeken."
-
 
 Explicit translations
 ---------------------
 
 ::
 
+  logger = ...
   from zope.i18n import translate
   msg = _("My books portlet is displayed.")
   translation = translate(msg, context=self.request)
-  logger = ...
   logger.info(translation)
 
 
@@ -224,6 +211,10 @@ Is it used?
 -----------
 
 .. image:: https://raw.github.com/mauritsvanrees/maurits.i18ntalk/master/static/portal_types_domain.png
+
+.. We see the domain is stored in the ZODB, in portal_types.  If the
+.. domain is not stored anywhere on install, then translation is not
+.. supported or only the plone domain is supported.
 
 
 Which domain?
@@ -452,13 +443,9 @@ buildout::
       zest.releaser
       zest.pocompile
 
+Command::
 
-Extra translations
-------------------
-
-Just add a file::
-
-  your/package/locales/nl/LC_MESSAGES/plone.po
+  fullrelease
 
 
 Overriding existing translations
@@ -484,6 +471,16 @@ Be the first!  Order of loading::
 5. rest of the Products
 
 6. ``i18n`` folders (done by ``PlacelessTranslationService``)
+
+
+Expected changes in the future.
+-------------------------------
+
+- `No more`_ ``i18n:translate="some_message_id"``.
+
+- Babel instead of i18ndude?
+
+.. _`No more`: http://plone-regional-forums.221720.n2.nabble.com/Plone-s-gettext-approach-and-its-impact-on-translation-td5670027.html
 
 
 Babel instead of i18ndude
@@ -526,19 +523,13 @@ command line options or ``setup.cfg``::
 - Bad: currently extracts *all* domains
 
 
-Expected changes in the future.
--------------------------------
+Sprint topics?
+--------------
 
-- `No more`_ ``i18n:translate="some_message_id"``.
-
-- Babel instead of i18ndude?
-
-- Sprint: support extracting zcml in i18ndude?
+- support extracting zcml in i18ndude
   Code: https://github.com/collective/i18ndude
 
-- Sprint: improve babel or lingua?
-
-.. _`No more`: http://plone-regional-forums.221720.n2.nabble.com/Plone-s-gettext-approach-and-its-impact-on-translation-td5670027.html
+- improve babel or lingua
 
 
 ``msgid "The end"``
