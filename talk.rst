@@ -153,7 +153,7 @@ Strings in Python
 ``__init__.py``::
 
   from zope.i18nmessageid import MessageFactory
-  i18ntalkMF = MF('maurits.i18ntalk')
+  i18ntalkMF = MessageFactory('maurits.i18ntalk')
 
 In your python file::
 
