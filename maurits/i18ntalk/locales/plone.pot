@@ -33,3 +33,7 @@ msgstr ""
 #: profiles/default/portlets.xml
 msgid "Show your latest books"
 msgstr ""
+
+#: Schemata
+msgid "label_schema_starschema"
+msgstr ""

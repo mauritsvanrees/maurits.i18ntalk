@@ -290,6 +290,28 @@ Display menu item (2)
 .. The ``@@`` signs are optional.
 
 
+Schemata names
+--------------
+
+::
+
+    atapi.IntegerField(
+        'stars',
+        widget=...,
+       schemata='starschema',
+    ),
+
+Put your translations manually in the plone domain::
+
+  #: content/book.py
+  msgid "label_schema_starschema"
+  msgstr "Sterrenschema"
+
+Thanks, Reinout_.
+
+.. _Reinout: http://reinout.vanrees.org/weblog/2007/12/14/translating-schemata-names.html
+
+
 ``locales`` directory
 ---------------------
 

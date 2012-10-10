@@ -34,6 +34,7 @@ BookSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
             description=_(u"How well do you like this book? Use number 1 through 5."),
         ),
         validators=('isInt'),
+        schemata='starschema',
     ),
 
 
